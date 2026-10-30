@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KennyDev | Full-Stack Web Developer in Rwanda</title>
+<meta name="description" content="KennyDev builds modern, responsive websites and web applications for Rwandan businesses, startups and individuals. Request a quote today.">
+<meta property="og:title" content="KennyDev | Full-Stack Web Developer in Rwanda">
+<meta property="og:description" content="Modern, responsive websites and web applications that help businesses grow online.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#071426;--bg2:#0D1B30;--fg:#fff;--mut:#9fb0c8;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);--blue:#2563EB;--cy:#22D3EE;--sh:0 10px 30px rgba(0,0,0,.35);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+:root[data-theme=light]{--bg:#fff;--bg2:#f1f5fb;--fg:#0f1b2d;--mut:#4b5a70;--card:#fff;--bd:#dbe3ef;--sh:0 8px 24px rgba(13,27,48,.09);color-scheme:light}
+@media(prefers-color-scheme:light){:root:not([data-theme=dark]){--bg:#fff;--bg2:#f1f5fb;--fg:#0f1b2d;--mut:#4b5a70;--card:#fff;--bd:#dbe3ef;--sh:0 8px 24px rgba(13,27,48,.09);color-scheme:light}}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.2rem,6vw,4rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.15rem;font-family:inherit;font-weight:700}
+a{color:inherit}p{margin:0 0 1em}.w{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}.alt{background:var(--bg2)}.sub{color:var(--mut);max-width:60ch}
+.g{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;box-shadow:var(--sh);backdrop-filter:blur(10px);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--cy)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;border:1px solid var(--bd);background:transparent;color:var(--fg);font:600 15px inherit;font-family:inherit;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}.pri{background:linear-gradient(135deg,var(--blue),var(--cy));color:#04101f;border:0;box-shadow:0 8px 22px rgba(34,211,238,.25)}
+.wa{background:#25D366;color:#04210f;border:0}.sm{padding:8px 14px;font-size:14px}
+:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;font-size:1.25rem;text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo b{background:linear-gradient(135deg,var(--blue),var(--cy));color:#04101f;padding:2px 8px;border-radius:8px;font-family:Consolas,monospace}
+.links{display:flex;gap:4px;align-items:center}.links a{padding:8px 10px;text-decoration:none;color:var(--mut);font-size:14px;border-radius:8px}.links a:hover{color:var(--fg)}
+.ic{background:none;border:1px solid var(--bd);color:var(--fg);border-radius:10px;width:40px;height:40px;cursor:pointer;font-size:18px}
+#menu{display:none}
+@media(max-width:900px){#menu{display:block}.links{position:fixed;top:calc(64px + env(safe-area-inset-top,0px));left:0;right:0;background:var(--bg2);flex-direction:column;align-items:stretch;padding:12px 20px;display:none;border-bottom:1px solid var(--bd)}.links.open{display:flex}}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(37,99,235,.35),transparent),radial-gradient(600px 400px at 0 90%,rgba(34,211,238,.15),transparent),#071426;color:#fff}
+.hero .sub{color:#b6c6dc}.hero .btn:not(.pri):not(.wa){color:#fff;border-color:rgba(255,255,255,.25)}
+.hg{display:grid;gap:40px;grid-template-columns:1.2fr .8fr;align-items:center}@media(max-width:800px){.hg{grid-template-columns:1fr}}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(34,211,238,.4);padding:6px 14px;border-radius:99px;font-size:14px;color:#22D3EE;margin-bottom:18px}
+.badge i{width:9px;height:9px;border-radius:50%;background:#34d399;animation:p 1.6s infinite}@keyframes p{50%{opacity:.3}}
+.grad{background:linear-gradient(90deg,#2563EB,#22D3EE);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tags span,.chip{border:1px solid var(--bd);border-radius:8px;padding:4px 10px;font:13px Consolas,monospace;color:var(--mut)}
+.hero .tags span{color:#b6c6dc;border-color:rgba(255,255,255,.18)}
+.photo{aspect-ratio:1;max-width:380px;margin:auto;border-radius:28px;border:1px solid rgba(34,211,238,.4);background:linear-gradient(145deg,rgba(37,99,235,.35),rgba(34,211,238,.12));display:grid;place-items:center;text-align:center;overflow:hidden;font-family:Consolas,monospace;box-shadow:0 0 60px rgba(37,99,235,.35);animation:fl 6s ease-in-out infinite}
+.photo img{width:100%;height:100%;object-fit:cover}.photo span{font-size:4rem;display:block;color:#22D3EE}@keyframes fl{50%{transform:translateY(-10px)}}
+.ico{font-size:1.7rem;margin-bottom:8px;display:block}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}.fl button{border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:99px;padding:8px 16px;cursor:pointer;font:inherit;font-size:14px}
+.fl button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.shot{height:150px;border-radius:12px;margin-bottom:14px;display:grid;place-items:center;font:700 1rem Consolas,monospace;color:#fff;background-size:cover;background-position:center;position:relative}
+.demo{position:absolute;top:8px;left:8px;background:rgba(0,0,0,.55);font-size:11px;padding:2px 8px;border-radius:6px}
+.tl{list-style:none;padding:0;margin:0;position:relative;max-width:720px}.tl::before{content:"";position:absolute;left:19px;top:0;bottom:0;width:2px;background:linear-gradient(var(--blue),var(--cy))}
+.tl li{position:relative;padding:0 0 26px 60px}.tl li b{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--bg);border:2px solid var(--cy);display:grid;place-items:center;font-size:14px}
+.alt .tl li b{background:var(--bg2)}.tl p{color:var(--mut);margin:0}
+details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;margin-bottom:12px}summary{cursor:pointer;font-weight:600}details p{margin:10px 0 0;color:var(--mut)}
+.pk ul{padding-left:18px;color:var(--mut)}.pk.f{border-color:var(--cy)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:30px}th,td{padding:10px;border-bottom:1px solid var(--bd);text-align:center}th:first-child,td:first-child{text-align:left}
+.sc{overflow-x:auto}
+form{display:grid;gap:14px;grid-template-columns:1fr 1fr}.full{grid-column:1/-1}@media(max-width:700px){form{grid-template-columns:1fr}}
+label{font-size:14px;font-weight:600;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);font:inherit}
+.er{color:#f87171;font-size:13px;min-height:1em}#fb{padding:14px;border-radius:12px;display:none}#fb.ok{display:block;background:rgba(52,211,153,.15);border:1px solid #34d399}#fb.no{display:block;background:rgba(248,113,113,.12);border:1px solid #f87171}
+.cg{display:grid;gap:30px;grid-template-columns:1fr 1.3fr}@media(max-width:800px){.cg{grid-template-columns:1fr}}
+footer{background:#050d1a;color:#9fb0c8;padding:40px 0 90px}footer a{color:#cfe0f5}.fx{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;flex-direction:column;gap:10px}
+.fab a,.fab button{width:52px;height:52px;border-radius:50%;border:0;display:grid;place-items:center;font-size:22px;cursor:pointer;text-decoration:none;box-shadow:var(--sh)}
+#top{background:var(--blue);color:#fff;opacity:0;pointer-events:none;transition:opacity .3s}#top.show{opacity:1;pointer-events:auto}
+dialog{border:1px solid var(--bd);border-radius:18px;background:var(--bg2);color:var(--fg);max-width:520px;width:calc(100% - 32px);padding:26px}dialog::backdrop{background:rgba(0,0,0,.6)}
+#ld{position:fixed;inset:0;background:#071426;z-index:100;display:grid;place-items:center;transition:opacity .5s;color:#22D3EE;font:700 2rem Consolas,monospace}#ld.h{opacity:0;pointer-events:none}#ld span{animation:p 1s infinite}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="ld"><span>&lt;/&gt;</span></div>
+<header><div class="w"><nav aria-label="Main">
+<a class="logo" href="#home"><b>&lt;/&gt;</b>KennyDev</a>
+<div class="links" id="nl"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="btn pri sm" href="#contact">Contact</a></div>
+<div style="display:flex;gap:8px"><button class="ic" id="th" aria-label="Toggle light or dark mode">🌓</button><button class="ic" id="menu" aria-label="Open menu" aria-expanded="false">☰</button></div>
+</nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="w hg">
+<div>
+<div class="badge"><i></i>Available for new projects</div>
+<h1>Turning Ideas Into <span class="grad">Powerful Digital Experiences.</span></h1>
+<p class="sub">I build modern, responsive, and professional websites and web applications that help businesses grow, connect with customers, and succeed online.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn pri" href="#projects">View My Projects</a><a class="btn" href="#" data-wa="Hi KennyDev, I would like to hire you for a project.">Hire Me</a><a class="btn wa" href="#" data-wa="Hello KennyDev, I found your portfolio and would like to talk.">WhatsApp</a></div>
+<div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind</span><span>Node.js</span><span>Supabase</span></div>
+</div>
+<div class="photo" id="ph"><div><span>&lt;/&gt;</span>Your profile photo here</div></div>
+</div></section>
+
+<section id="about" class="alt"><div class="w cg">
+<div class="photo" id="ph2" style="animation:none;max-width:320px"><div><span>K</span>Profile photo</div></div>
+<div>
+<h2>About me</h2>
+<p>I'm Kenny, a full-stack web developer based in Rwanda. I build websites and web applications for businesses, startups and individuals who want a stronger presence online.</p>
+<p>I like turning real business problems into simple, usable software. I start by understanding how your business works and who your customers are, then build something clear, fast and easy to maintain.</p>
+<p>Every site I build is designed to work well on phones, tablets and desktops, because most Rwandan customers browse on mobile.</p>
+<div class="tags" style="margin:0 0 22px"><span>📍 Rwanda, East Africa</span><span>Web apps</span><span>UI/UX</span><span>Business websites</span></div>
+<button class="btn pri" id="cv">Download CV</button>
+</div></div></section>
+
+<section id="services"><div class="w"><h2>Services</h2><p class="sub">Choose a service to start a conversation on WhatsApp.</p><div class="g" id="sv" style="margin-top:28px"></div></div></section>
+
+<section id="projects" class="alt"><div class="w"><h2>Projects</h2><p class="sub">These are demonstration projects that show the kind of work I build. They are not client projects.</p>
+<div class="fl" id="fl" role="group" aria-label="Filter projects"></div><div class="g" id="pj"></div></div></section>
+
+<section id="skills"><div class="w"><h2>Technologies</h2><p class="sub">Tools I use or am learning, grouped by what they're for.</p><div class="g" id="sk" style="margin-top:28px"></div></div></section>
+
+<section id="process" class="alt"><div class="w"><h2>How I work</h2><ol class="tl" id="tl" style="margin-top:28px"></ol></div></section>
+
+<section id="why"><div class="w"><h2>Why work with me</h2><div class="g" id="wy" style="margin-top:28px"></div></div></section>
+
+<section id="reviews" class="alt"><div class="w"><h2>Client reviews</h2>
+<div class="card" id="rv" style="max-width:640px"><span class="ico">💬</span><h3>Your review could be here</h3><p class="sub" style="margin:0">I'm building my portfolio and will publish genuine reviews from completed projects. After we finish a project, I'll invite you to share honest feedback.</p></div></div></section>
+
+<section id="pricing"><div class="w"><h2>Request a quote</h2><p class="sub">Every project is different, so I quote based on what you need. Tell me about it and I'll reply with a custom estimate.</p>
+<div class="g" id="pk" style="margin-top:28px"></div><div class="sc"><table id="cmp"></table></div></div></section>
+
+<section id="faq" class="alt"><div class="w" style="max-width:800px"><h2>Frequently asked questions</h2><div id="fq"></div></div></section>
+
+<section id="contact"><div class="w cg">
+<div><h2>Let's talk about your project</h2><p class="sub">Send the form or reach me directly.</p>
+<p>📍 Rwanda, East Africa</p><p><a href="#" data-wa="Hello KennyDev, I'd like to discuss a project.">WhatsApp: <span id="ph_t"></span></a></p><p><a id="em" href="#"></a></p>
+<div class="tags" id="soc"></div></div>
+<div class="card"><form id="f" novalidate>
+<div><label for="n">Full name *</label><input id="n" autocomplete="name"><div class="er"></div></div>
+<div><label for="b">Business name (optional)</label><input id="b"></div>
+<div><label for="e">Email *</label><input id="e" type="email" autocomplete="email"><div class="er"></div></div>
+<div><label for="p">Phone *</label><input id="p" type="tel" placeholder="+250 7XX XXX XXX" autocomplete="tel"><div class="er"></div></div>
+<div><label for="t">Project type *</label><select id="t"><option value="">Select…</option></select><div class="er"></div></div>
+<div><label for="bu">Estimated budget</label><select id="bu"><option>Not sure yet</option><option>Under 200,000 RWF</option><option>200,000 – 500,000 RWF</option><option>500,000 – 1,500,000 RWF</option><option>Above 1,500,000 RWF</option></select></div>
+<div class="full"><label for="d">Project description *</label><textarea id="d" rows="4"></textarea><div class="er"></div></div>
+<div class="full" style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn pri" type="submit">Send via WhatsApp</button><button class="btn" type="button" id="ml">Send via email</button></div>
+<div class="full" id="fb" role="status"></div>
+<p class="full sub" style="font-size:13px;margin:0">This form doesn't store data on a server. It checks your details, then opens WhatsApp or your email app with the message ready to send.</p>
+</form></div></div></section>
+</main>
+
+<footer><div class="w fx"><div><a class="logo" href="#home" style="color:#fff"><b>&lt;/&gt;</b>KennyDev</a><p style="margin-top:10px">Full-Stack Web Developer · Rwanda</p></div><div><p>© <span id="yr"></span> KennyDev. All rights reserved.</p><p><a href="#contact">Start a project</a></p></div></div></footer>
+
+<div class="fab"><button id="top" aria-label="Back to top">↑</button><a class="wa" href="#" data-wa="Hello KennyDev, I'd like to discuss a project." aria-label="Chat on WhatsApp">💬</a></div>
+<dialog id="dg"><h3 id="dt"></h3><p id="dd" class="sub"></p><p id="dtc"></p><div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn pri" id="dl" href="#" data-wa="">Discuss this project</a><button class="btn" id="dx">Close</button></div></dialog>
+
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+const C={
+ name:"KennyDev",
+ whatsapp:"250700000000",       // international format, no + or spaces (Rwanda = 250...)
+ phoneDisplay:"+250 700 000 000",
+ email:"hello@example.com",
+ cvUrl:"",                      // link to your CV (PDF). Leave empty until ready.
+ photo:"",                      // link to your profile photo
+ socials:{GitHub:"https://github.com/kenny-11-dev",LinkedIn:"",X:"",Instagram:"",YouTube:""}, // add your profile URLs
+ projects:[
+  {n:"Online Clothing Store",c:"E-Commerce",d:"Product catalogue, cart and checkout flow for a fashion shop.",t:["React","Tailwind","Supabase"],img:"",demo:"",g:"#2563EB,#7c3aed"},
+  {n:"FlickZone Movie Discovery Platform",c:"Web Applications",d:"Search, browse and save movies with a clean discovery interface.",t:["React","REST API","Vercel"],img:"",demo:"",g:"#0891b2,#2563EB"},
+  {n:"Business Management Dashboard",c:"Management Systems",d:"Sales, inventory and reporting dashboard with admin tools.",t:["React","Node.js","Supabase"],img:"",demo:"",g:"#1d4ed8,#22D3EE"},
+  {n:"Hotel Booking Website",c:"Booking Systems",d:"Room listings, availability search and booking requests.",t:["React","Supabase","Tailwind"],img:"",demo:"",g:"#0f766e,#2563EB"},
+  {n:"Restaurant Ordering Website",c:"Business Websites",d:"Menu, online ordering and WhatsApp order confirmation.",t:["HTML5","CSS3","JavaScript"],img:"",demo:"",g:"#b45309,#2563EB"},
+  {n:"School Management System",c:"Management Systems",d:"Students, classes, attendance and results in one system.",t:["React","Node.js","Database"],img:"",demo:"",g:"#4338ca,#22D3EE"}
+ ]
+};
+/* ================================== */
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const wa=m=>`https://wa.me/${C.whatsapp}?text=${encodeURIComponent(m)}`;
+const SV=[["🏢","Business Website Development","Professional websites that present your company clearly."],["🛒","E-Commerce Websites","Online stores with catalogues, carts and checkout."],["⚙️","Full-Stack Web Applications","Custom apps with front end, back end and database."],["🎓","School Management Systems","Students, staff, attendance and results in one place."],["🏨","Hotel Booking Systems","Room listings, availability and booking requests."],["🍽️","Restaurant Websites","Menus, ordering and reservations for restaurants."],["📊","Dashboard & Admin Systems","Clear tools to manage data and daily operations."],["🔄","Website Redesign","Refresh an outdated site for today's devices."],["🛠️","Website Maintenance","Updates, fixes and monitoring after launch."],["🗄️","Database Integration","Structured, secure data storage for your app."],["🔌","API Integration","Connect payments, maps, messaging and other services."],["🎨","UI/UX Design","Interfaces that are easy to understand and use."]];
+const SK=[["Frontend Development",["HTML5","CSS3","JavaScript","React","Tailwind CSS"]],["Backend Development",["Node.js","REST APIs"]],["Database",["Supabase"]],["Deployment & Tools",["GitHub","Vercel"]],["UI/UX Design",["Figma"]]];
+const PR=["Initial Consultation|We talk about your goals, audience and timeline.","Requirements Gathering|We list the pages, features and content you need.","UI/UX Design|I design the layout and look for your approval.","Development|I build the site with clean, maintainable code.","Testing & Optimization|I test on different devices and improve speed.","Deployment|Your site goes live on a reliable host.","Maintenance & Support|I stay available for updates and help."];
+const WY=[["📱","Responsive development","Sites that work on phones, tablets and desktops."],["✨","User-friendly interfaces","Clear layouts that visitors can use without help."],["💼","Business-focused solutions","Built around your goals, not just trends."],["🧱","Clean, maintainable code","Organised code that's easier to extend later."],["💬","Clear communication","Regular updates throughout the project."],["🔒","Performance & security","Careful practices for speed and safe data handling."],["🤝","Support after delivery","Help available once your site is live."]];
+const PK=[["Starter Website","A simple, professional online presence.",["Up to a few pages","Responsive design","Contact form & WhatsApp","Basic SEO setup"]],["Professional Website","A fuller site for growing businesses.",["More pages & sections","Custom design","Blog or gallery options","SEO & analytics setup"],1],["Advanced Web Application","Custom software with accounts and data.",["Login & user roles","Database & admin dashboard","API & payment integration","Ongoing support options"]]];
+const CMP=[["Responsive design",1,1,1],["Contact & WhatsApp",1,1,1],["Custom design","–",1,1],["CMS / admin area","–","Optional",1],["User accounts & database","–","–",1],["API / payment integration","–","Optional",1]];
+const FQ=[["How do I hire you?","Send the contact form or message me on WhatsApp. We'll discuss your project and I'll send a quote."],["How long does website development take?","It depends on the size and complexity. After we talk, I'll give you a timeline estimate for your project."],["Can you build an online store?","Yes. I build e-commerce sites with product catalogues, carts and checkout."],["Can you integrate online payments?","Yes, I can integrate payment providers that offer APIs. The right option depends on your business and provider."],["Can you redesign my existing website?","Yes. I can improve the design, mobile experience and performance of your current site."],["Do you provide website maintenance?","Yes, I offer maintenance and support after launch. We can agree on the details for your project."],["Can I manage my website after delivery?","Yes. I can set up the site so you can update key content, and I'll explain how."],["Do you work with businesses throughout Rwanda?","Yes. I work with clients across Rwanda, and projects can be handled remotely."]];
+const CATS=["All","Business Websites","E-Commerce","Web Applications","Management Systems","Booking Systems"];
+
+$("#ph_t").textContent=C.phoneDisplay;const em=$("#em");em.textContent=C.email;em.href="mailto:"+C.email;$("#yr").textContent=new Date().getFullYear();
+if(C.photo)["#ph","#ph2"].forEach(s=>$(s).innerHTML=`<img src="${esc(C.photo)}" alt="Kenny, web developer">`);
+$("#sv").innerHTML=SV.map(s=>`<div class="card rv"><span class="ico">${s[0]}</span><h3>${s[1]}</h3><p class="sub">${s[2]}</p><a class="btn sm" href="#" data-wa="Hello KennyDev, I'd like to discuss a project: ${s[1]}.">Discuss Project</a></div>`).join("");
+$("#fl").innerHTML=CATS.map((c,i)=>`<button class="${i?'':'on'}" data-c="${c}">${c}</button>`).join("");
+function shot(p){const [a,b]=p.g.split(",");return p.img?`<div class="shot" style="background-image:url('${esc(p.img)}')"><span class="demo">Demo project</span></div>`:`<div class="shot" style="background:linear-gradient(135deg,${a},${b})"><span class="demo">Demo project</span>&lt;/&gt;</div>`}
+function drawP(cat){$("#pj").innerHTML=C.projects.map((p,i)=>({p,i})).filter(o=>cat==="All"||o.p.c===cat).map(({p,i})=>`<article class="card">${shot(p)}<h3>${esc(p.n)}</h3><p class="sub">${esc(p.d)}</p><div class="tags" style="margin:0 0 14px">${p.t.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div style="display:flex;gap:8px;flex-wrap:wrap">${p.demo?`<a class="btn pri sm" href="${esc(p.demo)}" target="_blank" rel="noopener">View Live Demo</a>`:`<button class="btn sm" disabled title="Demo link not added yet">Demo coming soon</button>`}<button class="btn sm" data-d="${i}">View Details</button></div></article>`).join("")||'<p class="sub">No projects in this category yet.</p>'}
+drawP("All");
+$("#fl").onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("#fl button").forEach(x=>x.classList.toggle("on",x===b));drawP(b.dataset.c)};
+$("#pj").onclick=e=>{const b=e.target.closest("[data-d]");if(!b)return;const p=C.projects[b.dataset.d];$("#dt").textContent=p.n;$("#dd").textContent=p.d;$("#dtc").textContent="Category: "+p.c+" · Tech: "+p.t.join(", ")+". This is a demonstration project, not a client project.";$("#dl").dataset.wa=`Hello KennyDev, I'd like a project similar to "${p.n}".`;$("#dg").showModal()};
+$("#dx").onclick=()=>$("#dg").close();
+$("#sk").innerHTML=SK.map(([g,l])=>`<div class="card rv"><h3>${g}</h3><div class="tags" style="margin:0">${l.map(t=>`<span class="chip">${t}</span>`).join("")}</div></div>`).join("");
+$("#tl").innerHTML=PR.map((s,i)=>{const[a,b]=s.split("|");return`<li class="rv"><b>${i+1}</b><h3>${a}</h3><p>${b}</p></li>`}).join("");
+$("#wy").innerHTML=WY.map(s=>`<div class="card rv"><span class="ico">${s[0]}</span><h3>${s[1]}</h3><p class="sub" style="margin:0">${s[2]}</p></div>`).join("");
+$("#pk").innerHTML=PK.map(p=>`<div class="card pk rv ${p[3]?'f':''}"><h3>${p[0]}</h3><p class="sub">${p[1]}</p><ul>${p[2].map(x=>`<li>${x}</li>`).join("")}</ul><a class="btn ${p[3]?'pri':''}" href="#contact" data-pick="${p[0]}">Request a Quote</a></div>`).join("");
+$("#cmp").innerHTML=`<tr><th>Feature</th>${PK.map(p=>`<th>${p[0]}</th>`).join("")}</tr>`+CMP.map(r=>`<tr><td>${r[0]}</td>${r.slice(1).map(v=>`<td>${v===1?"✓":v}</td>`).join("")}</tr>`).join("");
+$("#fq").innerHTML=FQ.map(q=>`<details><summary>${q[0]}</summary><p>${q[1]}</p></details>`).join("");
+const types=["Business Website","E-Commerce Website","Web Application","School Management System","Hotel Booking System","Restaurant Website","Dashboard / Admin System","Website Redesign","Maintenance","Other"];
+$("#t").innerHTML+=types.map(t=>`<option>${t}</option>`).join("");
+$("#soc").innerHTML=Object.entries(C.socials).filter(([,u])=>u).map(([k,u])=>`<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${k}</a>`).join("")||'<span class="chip">Social links: add yours in the config</span>';
+$("#pk").onclick=e=>{const a=e.target.closest("[data-pick]");if(a)$("#d").value="I'm interested in the "+a.dataset.pick+" package. "};
+
+document.addEventListener("click",e=>{const a=e.target.closest("[data-wa]");if(a){e.preventDefault();window.open(wa(a.dataset.wa),"_blank","noopener")}});
+$("#cv").onclick=()=>C.cvUrl?window.open(C.cvUrl,"_blank","noopener"):alert("My CV isn't uploaded yet. Please contact me and I'll send it.");
+
+function val(){let ok=true;const r=(id,t)=>{const el=$("#"+id),er=el.parentNode.querySelector(".er");const bad=t(el.value.trim());er.textContent=bad||"";el.setAttribute("aria-invalid",!!bad);if(bad)ok=false};
+r("n",v=>v.length<2?"Enter your full name.":"");r("e",v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?"":"Enter a valid email address.");
+r("p",v=>/^(\+?250|0)?7\d{8}$/.test(v.replace(/[\s-]/g,""))?"":"Enter a valid Rwanda number, e.g. +250 7XX XXX XXX.");
+r("t",v=>v?"":"Select a project type.");r("d",v=>v.length<15?"Describe your project in at least 15 characters.":"");return ok}
+function msg(){const g=i=>$("#"+i).value.trim();return`Hello KennyDev,\nName: ${g("n")}\nBusiness: ${g("b")||"-"}\nEmail: ${g("e")}\nPhone: ${g("p")}\nProject type: ${g("t")}\nBudget: ${g("bu")}\nDetails: ${g("d")}`}
+function done(t){const f=$("#fb");f.className=t?"ok":"no";f.textContent=t||"Please fix the highlighted fields and try again."}
+$("#f").onsubmit=e=>{e.preventDefault();if(!val())return done();window.open(wa(msg()),"_blank","noopener");done("Thanks! WhatsApp should open with your message ready. Press send there to reach me.")};
+$("#ml").onclick=()=>{if(!val())return done();location.href=`mailto:${C.email}?subject=${encodeURIComponent("Project enquiry")}&body=${encodeURIComponent(msg())}`;done("Your email app should open with the message ready. Press send there to reach me.")};
+
+const nl=$("#nl"),mb=$("#menu");mb.onclick=()=>{const o=nl.classList.toggle("open");mb.setAttribute("aria-expanded",o)};nl.onclick=e=>{if(e.target.tagName==="A"){nl.classList.remove("open");mb.setAttribute("aria-expanded",false)}};
+const root=document.documentElement;try{const s=localStorage.getItem("theme");if(s)root.dataset.theme=s}catch(e){}
+$("#th").onclick=()=>{const l=getComputedStyle(root).colorScheme==="light";const n=l?"dark":"light";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+const tp=$("#top");addEventListener("scroll",()=>tp.classList.toggle("show",scrollY>600),{passive:true});tp.onclick=()=>scrollTo({top:0,behavior:"smooth"});
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.1});$$(".rv").forEach(x=>io.observe(x));
+addEventListener("load",()=>setTimeout(()=>$("#ld").classList.add("h"),500));
+</script>
+</body>
+</html>
