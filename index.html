@@ -104,7 +104,7 @@ dialog{border:1px solid var(--bd);border-radius:18px;background:var(--bg2);color
 
 <section id="services"><div class="w"><h2>Services</h2><p class="sub">Choose a service to start a conversation on WhatsApp.</p><div class="g" id="sv" style="margin-top:28px"></div></div></section>
 
-<section id="projects" class="alt"><div class="w"><h2>Projects</h2><p class="sub">These are demonstration projects that show the kind of work I build. They are not client projects.</p>
+<section id="projects" class="alt"><div class="w"><h2>Projects</h2><p class="sub">Live projects I've built, plus demonstration projects (marked) that show the kind of work I can build.</p>
 <div class="fl" id="fl" role="group" aria-label="Filter projects"></div><div class="g" id="pj"></div></div></section>
 
 <section id="skills"><div class="w"><h2>Technologies</h2><p class="sub">Tools I use or am learning, grouped by what they're for.</p><div class="g" id="sk" style="margin-top:28px"></div></div></section>
@@ -155,8 +155,9 @@ const C={
  photo:"",                      // link to your profile photo
  socials:{GitHub:"https://github.com/kenny-11-dev",LinkedIn:"",X:"",Instagram:"",YouTube:""}, // add your profile URLs
  projects:[
+  {n:"FlickZone",c:"Web Applications",d:"A movie discovery platform for finding and browsing films online.",t:["Web App","Vercel"],img:"",demo:"https://flickzone-phi.vercel.app/",g:"#0891b2,#2563EB",live:1},
+  {n:"TaxPro Rwanda",c:"Business Websites",d:"An independent service that helps individuals and businesses in Rwanda understand and prepare their tax declarations.",t:["Website","Vercel"],img:"",demo:"https://taxpro-rwanda.vercel.app/",g:"#10243A,#22D3EE",live:1},
   {n:"Online Clothing Store",c:"E-Commerce",d:"Product catalogue, cart and checkout flow for a fashion shop.",t:["React","Tailwind","Supabase"],img:"",demo:"",g:"#2563EB,#7c3aed"},
-  {n:"FlickZone Movie Discovery Platform",c:"Web Applications",d:"Search, browse and save movies with a clean discovery interface.",t:["React","REST API","Vercel"],img:"",demo:"",g:"#0891b2,#2563EB"},
   {n:"Business Management Dashboard",c:"Management Systems",d:"Sales, inventory and reporting dashboard with admin tools.",t:["React","Node.js","Supabase"],img:"",demo:"",g:"#1d4ed8,#22D3EE"},
   {n:"Hotel Booking Website",c:"Booking Systems",d:"Room listings, availability search and booking requests.",t:["React","Supabase","Tailwind"],img:"",demo:"",g:"#0f766e,#2563EB"},
   {n:"Restaurant Ordering Website",c:"Business Websites",d:"Menu, online ordering and WhatsApp order confirmation.",t:["HTML5","CSS3","JavaScript"],img:"",demo:"",g:"#b45309,#2563EB"},
@@ -180,11 +181,11 @@ $("#ph_t").textContent=C.phoneDisplay;const em=$("#em");em.textContent=C.email;e
 if(C.photo)["#ph","#ph2"].forEach(s=>$(s).innerHTML=`<img src="${esc(C.photo)}" alt="Kenny, web developer">`);
 $("#sv").innerHTML=SV.map(s=>`<div class="card rv"><span class="ico">${s[0]}</span><h3>${s[1]}</h3><p class="sub">${s[2]}</p><a class="btn sm" href="#" data-wa="Hello KennyDev, I'd like to discuss a project: ${s[1]}.">Discuss Project</a></div>`).join("");
 $("#fl").innerHTML=CATS.map((c,i)=>`<button class="${i?'':'on'}" data-c="${c}">${c}</button>`).join("");
-function shot(p){const [a,b]=p.g.split(",");return p.img?`<div class="shot" style="background-image:url('${esc(p.img)}')"><span class="demo">Demo project</span></div>`:`<div class="shot" style="background:linear-gradient(135deg,${a},${b})"><span class="demo">Demo project</span>&lt;/&gt;</div>`}
+function shot(p){const [a,b]=p.g.split(","),L=p.live?"Live project":"Demo project";return p.img?`<div class="shot" style="background-image:url('${esc(p.img)}')"><span class="demo">${L}</span></div>`:`<div class="shot" style="background:linear-gradient(135deg,${a},${b})"><span class="demo">${L}</span>&lt;/&gt;</div>`}
 function drawP(cat){$("#pj").innerHTML=C.projects.map((p,i)=>({p,i})).filter(o=>cat==="All"||o.p.c===cat).map(({p,i})=>`<article class="card">${shot(p)}<h3>${esc(p.n)}</h3><p class="sub">${esc(p.d)}</p><div class="tags" style="margin:0 0 14px">${p.t.map(t=>`<span>${esc(t)}</span>`).join("")}</div><div style="display:flex;gap:8px;flex-wrap:wrap">${p.demo?`<a class="btn pri sm" href="${esc(p.demo)}" target="_blank" rel="noopener">View Live Demo</a>`:`<button class="btn sm" disabled title="Demo link not added yet">Demo coming soon</button>`}<button class="btn sm" data-d="${i}">View Details</button></div></article>`).join("")||'<p class="sub">No projects in this category yet.</p>'}
 drawP("All");
 $("#fl").onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("#fl button").forEach(x=>x.classList.toggle("on",x===b));drawP(b.dataset.c)};
-$("#pj").onclick=e=>{const b=e.target.closest("[data-d]");if(!b)return;const p=C.projects[b.dataset.d];$("#dt").textContent=p.n;$("#dd").textContent=p.d;$("#dtc").textContent="Category: "+p.c+" · Tech: "+p.t.join(", ")+". This is a demonstration project, not a client project.";$("#dl").dataset.wa=`Hello KennyDev, I'd like a project similar to "${p.n}".`;$("#dg").showModal()};
+$("#pj").onclick=e=>{const b=e.target.closest("[data-d]");if(!b)return;const p=C.projects[b.dataset.d];$("#dt").textContent=p.n;$("#dd").textContent=p.d;$("#dtc").textContent="Category: "+p.c+" · Tech: "+p.t.join(", ")+(p.live?". This is a live project you can visit.":". This is a demonstration project, not a client project.");$("#dl").dataset.wa=`Hello KennyDev, I'd like a project similar to "${p.n}".`;$("#dg").showModal()};
 $("#dx").onclick=()=>$("#dg").close();
 $("#sk").innerHTML=SK.map(([g,l])=>`<div class="card rv"><h3>${g}</h3><div class="tags" style="margin:0">${l.map(t=>`<span class="chip">${t}</span>`).join("")}</div></div>`).join("");
 $("#tl").innerHTML=PR.map((s,i)=>{const[a,b]=s.split("|");return`<li class="rv"><b>${i+1}</b><h3>${a}</h3><p>${b}</p></li>`}).join("");
